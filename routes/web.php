@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'TasksController@index');
+
+Route::get('/about', function () {
+    return 'Hello World!';
 });
+
+//use App\Task;
+//
+//Route::get('/task/create', function () {
+//    $task = new Task();
+//    $task->description('Description');
+//    $task->save();
+//});
