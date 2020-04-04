@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TasksController@index');
 
 Route::get('/about', function () {
-    return 'Hello World!';
+    return view('welcome');
 });
+
 
 //use App\Task;
 //
@@ -26,3 +27,7 @@ Route::get('/about', function () {
 //    $task->description('Description');
 //    $task->save();
 //});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
